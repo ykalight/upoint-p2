@@ -1,0 +1,28 @@
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes pop {
+    0% {opacity: .2}
+    40% {opacity: 1}
+    60% {opacity: 1}
+}
+
+/* Standard syntax */
+@keyframes pop {
+    0% {opacity: .2}
+    40% {opacity: 1}
+    60% {opacity: 1}
+}
+
+.popover-soft{
+    -webkit-animation-name: pop; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 2.4s; /* Safari 4.0 - 8.0 */
+    animation-name: pop;
+    animation-duration: 2.4;
+
+    opacity: 0;
+    @include font(.8, 'Regular');
+    color: $popover-text;
+    padding: 12px 24px;
+    background-color: $popover-bg-color;
+    text-align:center;
+    @include border-radius( $popover-border-radius )
+}

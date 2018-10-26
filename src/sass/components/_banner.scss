@@ -1,0 +1,35 @@
+
+.banner{
+    background-color: #fff;
+
+    &__button{
+        font-size: $banner-button-text-size;
+        color: $banner-button-text-color;
+        background-color: $banner-button-bg-color;
+        padding:12px 2.4em;
+    }
+
+    &__img{height: 460px}
+    &__h1{font-size: 3em; line-height:1em}
+    &__p{font-size: 1.3em; margin:8px 0}
+    &__content{top: 100px; width: 50%; min-width: 420px; padding: 18px 58px}
+
+    @media only screen and (max-width: $large) {
+        &__h1{font-size: 2.6em}
+        &__p{font-size: 1.1em; margin:6px 0}
+    }
+    @media only screen and (max-width: $medium) {
+        &__img{height: 380px}
+        &__h1{font-size: 2.2em}
+        &__p{font-size: .9em}
+        &__content{top: 70px; width: 60%}
+        &__button{font-size: 1em; padding:8px 2em;}
+    }
+    @media only screen and (max-width: $small) {
+        &__img{height: 320px}
+        &__h1{font-size: 1.8em}
+        &__h1, &__p{width:64%}
+        &__content{transition: 0.4s; top: 0; width:100%; height:280px; min-width: auto; padding: 82px 18px 28px 18px}
+        &__button{font-size: .94em; padding:6px 1.4em;}
+    }
+}

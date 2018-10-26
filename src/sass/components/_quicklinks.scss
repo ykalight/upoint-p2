@@ -1,0 +1,78 @@
+.quicklinks{
+    transition: 0.4s;
+    display: grid;
+    grid-template-columns: auto 80px;
+    padding:4px 12px;
+
+    &__trigger{
+        padding:28px 22px;
+        cursor: pointer;
+        align-self: center;
+        justify-self: center;
+        :first-child{width: 24px; height: 24px; color: $card-arrow-color}
+    }
+
+    @media only screen and (max-width: $small) {
+        grid-template-columns: auto 26px;
+        padding:4px 0;
+
+        &__trigger{
+            padding:0;
+            :first-child{width: 18px; height: 18px}
+        }
+    }
+}
+
+.flipwrap{
+    // display:flex;
+    // justify-content: space-around;
+    // padding:8px;
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 0;
+
+    a{
+        display:block;
+        transition: 0.6s;
+        text-align:center;
+        @include font(.84, 'Regular');
+        label{display:block; color: $quicklink-label-color; margin-top:12px}
+        .ficon-medical:before{color: $quicklink-icon-medical-color}
+        .ficon-clock:before{color: $quicklink-icon-clock-color}
+        .ficon-person:before{color: $quicklink-icon-person-color}
+        .ficon-graph-circle:before{color: $quicklink-icon-graph-circle-color}
+        .ficon-spark:before{color: $quicklink-icon-spark-color}
+
+        &:hover{
+            .ql{
+                &[class^="ficon-"]:before{transition: 0.4s}
+            }
+            label{transition: 0.4s; color: $quicklink-label-hover}
+        }
+    }
+
+    @media only screen and (max-width: $medium) {
+        a{
+            > div:before{font-size:1.6em}
+            label {font-size:80%} 
+        }
+    }
+
+    @media only screen and (max-width: $small) {
+        padding:12px 8px;
+        a{
+            padding:0 12px;
+            margin:0 4px;
+            > div:before{font-size:1.4em}
+            label {font-size:70%} 
+        }
+    }
+
+    .quicklinkItem{margin:28px; position:relative;
+
+        @media only screen and (max-width: $small) {
+            margin:0px;
+        }
+    }
+}

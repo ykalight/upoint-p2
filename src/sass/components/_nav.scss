@@ -1,0 +1,114 @@
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes navlink {
+    0% {background-color:transparent; top:52px;}
+}
+
+/* Standard syntax */
+@keyframes navlink {
+    0% {background-color:transparent; top:52px;}
+}
+
+nav{
+    li{
+        font-size: .8em;
+        display:inline;
+        margin:1.6em;
+        a{color: $nav-text-color;
+            &.active{
+                color: $nav-active-text-color
+            }
+        }
+
+        div{
+            -webkit-animation-name: navlink; /* Safari 4.0 - 8.0 */
+            -webkit-animation-duration: .5s; /* Safari 4.0 - 8.0 */
+            animation-name: navlink;
+            animation-duration: .5s;
+    
+            background-color: $nav-second-tier-bg-color;
+            color: $nav-second-tier-text-color;
+            top: 54px;
+    
+            li{
+                display:inline-block;
+                margin:0;
+                font-size:1em;
+                a{
+                    display:block;
+                    padding:18px 28px;
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: $large) {
+        li{margin:1em; font-size: .8em}
+    }
+    @media only screen and (max-width: $medium) {
+        li{margin:.8em; font-size: .75em}
+    }
+}
+
+@media only screen and (max-width: $medium) {
+    .slide-pane__header{visibility:hidden; flex: 0 0 54px !important}
+    .slide-pane__content{
+        padding:0 !important;
+        nav{
+            width:100%;
+            margin:20px 0 0 0; padding:0;
+            li{
+                margin:0 auto; width:96%;
+                @include font(1em, 'Regular');
+                font-size:.9em;
+                display:block;
+                border-bottom:solid 1px $mobile-menu-li-divider-color;
+                a{padding:18px; display:block}
+
+                // Mobile more ========
+                @-webkit-keyframes mmore {0% {background-color:transparent; margin-left:-152px;}}
+                @keyframes mmore {0% {background-color:transparent; margin-left:-152px;}}
+
+                div.mnav-more{
+                    width: 100%;
+                    height:100vh;
+                    left: 0;
+                    position: absolute;
+                    
+                    -webkit-animation-name: mmore; /* Safari 4.0 - 8.0 */
+                    -webkit-animation-duration: .5s; /* Safari 4.0 - 8.0 */
+                    animation-name: mmore;
+                    animation-duration: .5s;
+            
+                    background-color: darken($mobile-menu-bg-color, 8%);
+                    color: $nav-second-tier-text-color;
+                    top: 0;
+
+                    li{
+                        width:96%; margin:0 auto; font-size:1em;
+                        
+                    }
+                }
+            }
+        }
+    }
+
+    @-webkit-keyframes mnav1 {0% { opacity: .0}};
+    @keyframes mnav1 {0% { opacity: .0}}
+    @-webkit-keyframes mnav2 {0% { opacity: .0}};
+    @keyframes mnav2 {0% { opacity: .0}}
+
+    .mnav-close{
+        -webkit-animation-name: mnav1; /* Safari 4.0 - 8.0 */
+        -webkit-animation-duration: .5s; /* Safari 4.0 - 8.0 */
+        animation-name: mnav1;
+        animation-duration: .5s;
+    }
+    .mnav-hamb{
+        -webkit-animation-name: mnav2; /* Safari 4.0 - 8.0 */
+        -webkit-animation-duration: .5s; /* Safari 4.0 - 8.0 */
+        animation-name: mnav2;
+        animation-duration: .5s;
+    }
+}
+
+.ReactModalPortal .navSlider{z-index:999; background-color: $mobile-menu-bg-color}

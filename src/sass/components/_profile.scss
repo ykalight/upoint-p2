@@ -1,0 +1,62 @@
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes profileFly {
+    0% {opacity: 0; right:-300px}
+}
+
+/* Standard syntax */
+@keyframes profileFly {
+    0% {opacity: 0; right:-300px}
+}
+
+.Head-profile{
+    .profile-dropdown{
+        border:solid 1px lighten($app-medgray, 28%);
+        border-top:0;
+        @include boxshadow(0, -1px, 10px, -4px, #000);
+
+        -webkit-animation-name: profileFly; /* Safari 4.0 - 8.0 */
+        -webkit-animation-duration: .3s; /*Safari 4.0 - 8.0 */
+        animation-name: profileFly;
+        animation-duration: .3s;
+
+        position:absolute;
+        right:0;
+        background-color: $header-profile-menu-bg-color;
+        min-width:580px;
+
+        .profile-blocks{display:flex; padding:0 8px;}
+        .profile-header{
+            background-color: $header-profile-header-bg-color;
+            display:flex; align-items: center;
+            padding:18px 24px;
+            .profile-name{
+                font-size:1.3em; text-align:left; color: $header-profile-header-name-color; padding-right:24px; border-right:solid 1px $app-medgray;
+                .profile-log{color: lighten($header-profile-header-name-color, 22%); font-size:48%}
+            }
+            a{font-size:.9em; padding: 8px 28px; color: $header-profile-logout-color; margin-left:28px;
+                @include border-radius($button-border-radius);
+                border: solid 1px $header-profile-logout-color;
+                &:hover{
+                    color: lighten($header-profile-logout-color, 28%);
+                    border-color: lighten($header-profile-logout-color, 28%);
+                }
+            }
+        }
+        
+        ul{min-width:200px; padding:18px 24px;
+            label{display:block; text-align:left; @include font(.88, 'Bold'); color: $header-profile-header-name-color}
+        }
+        li{
+            a{
+                font-size:.88em;
+                color: $header-profile-menu-text-color;
+                display:block;
+                text-align: left;
+                padding:18px 24px 18px 8px;
+                &:hover{
+                    color: $header-profile-menu-text-hover-color; 
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,40 @@
+
+// Icon size preset @(36px): Adjust icon font size at component level if needed.
+*[class^="ficon-"]{&:before{font-size:36px}}
+
+.ficon-arrow-down{&:before{content: "\e900"}}
+.ficon-arrow-left{&:before{content: "\e901"}}
+.ficon-arrow-right{&:before{content: "\e902"}}
+.ficon-arrow-up{&:before{content: "\e903"}}
+.ficon-bell{&:before{content: "\e904"}}
+.ficon-card{&:before{content: "\e905"}}
+.ficon-clock{&:before{content: "\e906"}}
+.ficon-document{&:before{content: "\e907"}}
+.ficon-eyeglass{&:before{content: "\e908"}}
+.ficon-graph-bar-outline{&:before{content: "\e909"}}
+.ficon-graph-bar{&:before{content: "\e90a"}}
+.ficon-graph-circle{&:before{content: "\e90b"}}
+.ficon-graph-pie{&:before{content: "\e90c"}}
+.ficon-heart{&:before{content: "\e90d"}}
+.ficon-medical{&:before{content: "\e90e"}}
+.ficon-pencil{&:before{content: "\e90f"}}
+.ficon-people-outline{&:before{content: "\e910"}}
+.ficon-people{&:before{content: "\e911"}}
+.ficon-person{&:before{content: "\e912"}}
+.ficon-piggy-outline{&:before{content: "\e913"}}
+.ficon-piggy{&:before{content: "\e914"}}
+.ficon-pin{&:before{content: "\e915"}}
+.ficon-spark{&:before{content: "\e916"}}
+.ficon-spyglass{&:before{content: "\e917"}}
+.ficon-talk{&:before{content: "\e918"}}
+.ficon-threedot{&:before{content: "\e919"}}
+.ficon-toothbrush{&:before{content: "\e91a"}}
+.ficon-pin-dark{&:before{content: "\e91b"}}
+.ficon-boxes-fit{&:before{content: "\e91c"}}
+.ficon-card-c{&:before{content: "\e91d"}}
+.ficon-card-b{&:before{content: "\e91e"}}
+.ficon-person-card{&:before{content: "\e91f"}}
+.ficon-specialist-b{&:before{content: "\e920"}}
+.ficon-plus-outline{&:before{content: "\e921"}}
+.ficon-specialist-a{&:before{content: "\e922"}}
+.ficon-prescription{&:before{content: "\e923"}}

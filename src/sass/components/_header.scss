@@ -1,0 +1,118 @@
+header{
+    transition:0.2s;
+    &.active{box-shadow: 0 -16px 18px 12px #000}
+
+    color: $header-text-color;
+    background-color: $header-bg-color;
+    text-align: center;
+    .Head-logo {padding: 0 0 0 12px;}
+
+    & > div{
+        #mnav{display:none;}
+        display: grid;
+        grid-template-columns: 240px auto 54px 54px 54px 54px;
+        grid-gap: 0;
+        grid-auto-rows: 54px;
+        align-items:center; 
+        
+        .Head-logo img{
+            transition:0.4s;
+            height: $header-logo-img-height; 
+            max-width: $header-logo-max-width; 
+            margin: $header-logo-margin;
+        }
+
+        @media only screen and (max-width: $medium) {
+            .Head-logo img{height:18px; max-width:90px}
+            grid-template-columns: auto auto 54px 54px 54px 54px;
+            grid-auto-rows: auto;
+        }
+
+        @media only screen and (max-width: $small) {
+            #mnav{
+                display:block;
+                padding-top: 8px;
+                // border-right: $mobile-nav-bt-divider;
+                margin-right: 12px;
+            }
+            .Head-profile, .Head-chat{display:none}
+            grid-template-columns: 54px auto 54px 54px;
+        }
+    }
+
+    @media only screen and (max-width: $small) {
+        padding:0;
+    }
+
+    .Head-search{
+        background-color: $header-search-bt-color;
+        &:hover{background-color: lighten($header-search-bt-color, 6%)}
+        
+        .react-drawer-drawer{
+            background-color: $header-searchbar-bg-color;
+            height:auto;
+        }
+        .react-drawer-overlay{
+            background-color: rgba(0, 0, 0, .1);
+        }
+        .search{
+            background-color: $header-search-input-bg-color;
+            height: 54px;
+            margin: 6px auto 14px auto;
+            padding: 12px 24px;
+            font-size: 1.4em;
+            outline:none;
+            width:50%;
+            border: 0;
+            border-bottom: $header-search-input-bottom-border;
+            color: $header-search-input-text-color;
+        }
+        form > div:before{
+            content: ''; width:30px; height:30px; padding:20px;
+            background: transparent url('../img/icon_art.svg') -594px -82px no-repeat; background-size:1000px;
+        }
+
+        @media only screen and (max-width: $medium) {
+            .search{
+                width:70%;
+            }
+        }
+
+        @media only screen and (max-width: $small) {
+            .search{
+                width:80%;
+                height: 36px;
+                margin: 24px auto;
+                padding: 12px 16px;
+                font-size: 1.3em;
+                border:0;
+            }
+        }
+    }
+
+    .Head-profile, .Head-message, .Head-chat{
+        &:hover{
+            background-color: lighten($header-bg-color, 4%)
+        }
+    }
+
+    .Head-message{
+        .badge{
+            @include border-radius(40px);
+            background-color: $header-badge-color;
+            @include font(.64, 'Bold');
+            padding:2px; border:solid 0px rgba(255, 255, 255, .8);
+            display:flex; align-items: center; justify-content: center;
+        }
+    }
+}
+.slide-pane__content nav{
+    .inmobile{
+        > a{padding:8px 6px; display:flex; align-items:center;
+            span{display:inline-block}
+        }
+        .Head-profile, .Head-chat{
+            background-color: transparent
+        }
+    }
+}

@@ -1,0 +1,59 @@
+// TEMP ----! for prototype demo only!  ----!
+// Remove once real content in linked.
+
+.card__top-visual > div{
+    width:100%; height:80px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: 0 50%;
+    background-size:contain;
+
+    &#tempGraph_00{background-image: url('../img/tempGraph_00n.svg'); height:66px;}
+    &#tempGraph_01{background-image: url('../img/tempGraph_01.svg'); height:66px;}
+    &#tempGraph_02{background-image: url('../img/tempGraph_02.svg'); height:90px;}
+    &#tempGraph_03{background-image: url('../img/tempGraph_03.svg'); height:70px;}
+    &#tempGraph_07{background-image: url('../img/tempGraph_07.svg'); height:70px;}
+
+    @media only screen and (max-width: $small) {
+        &#tempGraph_01{background-image: url('../img/tempGraph_14.svg'); height:66px;}
+        &#tempGraph_02{background-image: url('../img/tempGraph_16.svg'); height:62px;}
+        &#tempGraph_03{background-image: url('../img/tempGraph_05.svg'); height:62px;}
+        &#tempGraph_07{background-image: url('../img/tempGraph_15.svg'); height:58px;}
+    }
+}
+
+// Detail expand
+ .tempGraph{
+    width:100%; height:340px; margin:0 0 48px 0;
+    background-color: transparent;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size:contain;
+
+    &#tempGraph_00dt{background-image: url('../img/tempGraph_00.svg'); height:760px;}
+    &#tempGraph_01dt{background-image: url('../img/tempGraph_01dt.svg')}
+    &#tempGraph_02dt{background-image: url('../img/tempGraph_02dt.svg'); height:320px;}
+    &#tempGraph_03dt{background-image: url('../img/tempGraph_03dt.svg'); height:130px;}
+    &#tempGraph_07dt{background-image: url('../img/tempGraph_07dt.svg'); height:130px;}
+
+    @media only screen and (max-width: $small) {
+        &#tempGraph_01dt{height:160px;}
+        &#tempGraph_02dt{height:140px;}
+        &#tempGraph_03dt{height:80px;}
+        &#tempGraph_07dt{height:100px;}
+
+    }
+}
+
+// temp dynpage content
+.tempCards{
+    min-height: 240px;
+    padding:38px;
+
+    margin: 8px 0;
+    background-color: $card-bg-color;
+    border: solid 1px $card-border-color;
+    @include border-radius(14px);
+
+    p{font-size:1.2em}
+}

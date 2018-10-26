@@ -1,0 +1,87 @@
+.card{
+    $self: &;
+    transition: 0.4s;
+    margin: 8px 0;
+    background-color: $card-bg-color;
+    border: solid 1px $card-border-color;
+    @include border-radius($card-border-radius);
+    
+    &--active{
+        #{ $self }__top{&:hover{@include border-radius-custom( $card-border-radius, $card-border-radius, 0, 0);}}
+    }
+
+    &__panel {display:none; overflow: hidden; padding:18px}
+
+    @media only screen and (max-width: $small) {
+        border-top:0; border-right:0; border-left:0;
+        border-color: $card-border-color-mobile;
+        margin: 0;
+        @include border-radius(0);
+        &--active{
+            #{ $self }__top{
+                &:hover{@include border-radius(0)}
+            }
+        }
+    }
+}
+
+.card__top{
+    $self: &;
+    display: grid;
+    grid-template-columns: 30px 37% auto 80px;
+    grid-gap: 18px;
+    align-items: center;
+    min-height: 130px;
+    padding:12px;
+    transition: 0.4s;
+    @include border-radius($card-border-radius);
+    &:hover{background-color: $card-bg-hover-color; @include boxshadow(0, -1px, 8px, -4px, #000)}
+
+    &-title{
+        font-size: $card-title-text-size; color: $card-title-text-color; padding-right:52px
+    }
+    &-title-caption{
+        font-size:68%; color: lighten($card-title-text-color, 18%)
+    }
+    &-arrow{
+        justify-self: center;
+        :first-child{width: 24px; height: 24px; color: $card-arrow-color}
+        :before{ content: 'More '}
+    }
+    
+    &--nonexpand{
+        #{ $self }-arrow{
+            span:before{font-size:.9em}
+            :first-child{color: $nonexpand-card-link-color}
+        }   
+    }
+
+    @media only screen and (max-width: $medium) {
+        padding:18px 8px;
+        &-title{font-size:1.2em; padding-right:46px}
+        &-arrow{
+            a span{display:none}
+            :before{content: ''}
+        }
+    }
+
+    @media only screen and (max-width: $small) {
+        min-height: 90px;
+        grid-template-columns: 20px auto 120px 40px;
+        grid-gap: 8px;
+        &-title{padding-right:12px}
+        @include border-radius(0);
+        &-arrow{
+            :first-child{width: 21px; height: 21px}
+        }
+    }
+
+    @media only screen and (max-width: $xsmall) {
+        &-title{font-size:1em}
+    }
+}
+
+.flipwrap-med{
+    h3{color:#888}
+}
+

@@ -1,0 +1,34 @@
+[
+  {
+    "icon": "",
+    "title": "401(k) account",
+    "text": "Lorem ipsum retirement text here",
+    "visual": "tempGraph_01",
+    "nxlink": "http://www.hewittsolutions.com/demopack/premierco_upoint/release_7-4/dc_home.html?flag=savplan",
+    "expand": 
+      {
+        "title": "Retirement Income Projection Modeler",
+        "visual": "tempGraph_01dt",
+        "actions": 
+        [
+            {
+              "label": "Chat with a Retirement Specialist",
+              "classname": "person",
+              "destination": "#"
+            },
+            {
+              "label": "Change Contribution",
+              "classname": "piechart",
+              "destination": "#"
+            },
+            {
+              "label": "Change Investments",
+              "classname": "barchart",
+              "destination": "#"
+            }
+        ]
+      }
+  }
+]
+
+

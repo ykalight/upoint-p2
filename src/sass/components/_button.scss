@@ -1,0 +1,33 @@
+.button{
+    display:inline-block; 
+    margin:22px 0; 
+    padding:8px 1.8em;
+    font-size: $button-text-size;
+    color: $button-text-color;
+    background-color: $button-bg-color;
+    @include border-radius( $button-border-radius );
+    &:hover{
+        color: $button-text-hover-color; background-color: darken($button-bg-color, 18%)
+    }
+
+    &--outline{
+        color: $outline-button-text-color;
+        background-color: $outline-button-bg-color;
+        border: solid 1px $outline-button-outline-color;
+        
+        &:hover{
+            background-color: darken($outline-button-bg-color,18%);
+            border-color: darken($outline-button-outline-color, 18%);
+            color: darken($outline-button-text-color, 18%);
+        }
+    }
+
+    @media only screen and (max-width: $medium) {
+        font-size:1em;
+    }
+
+    @media only screen and (max-width: $small) {
+        font-size:.9em;
+        padding:6px 2.4em;
+    }
+}

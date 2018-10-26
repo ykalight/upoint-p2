@@ -1,0 +1,45 @@
+[
+    {
+        "title": "Health plans",
+        "icon": "medical",
+        "destination": "/blank"
+    },
+    {
+        "title": "Find a doctor",
+        "icon": "person",
+        "destination": "/blank"
+    },
+    {
+        "title": "Timesheet",
+        "icon": "clock",
+        "destination": "/blank"
+    },
+    {
+        "title": "Health savings account",
+        "icon": "graph-circle",
+        "destination": "/blank"
+    },
+    {
+        "title": "Wellbeing",
+        "icon": "spark",
+        "destination": "/blank"
+    },
+    {
+        "title": "Workday",
+        "icon": "graph-bar-outline",
+        "destination": "/blank"
+    },
+    {
+        "title": "Dependent care",
+        "icon": "card",
+        "destination": "/blank"
+    },
+    {
+        "title": "Documents",
+        "icon": "document",
+        "destination": "/blank"
+    }   
+]
+  
+  
+  

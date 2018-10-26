@@ -1,0 +1,38 @@
+
+.datavis{
+    display:flex; justify-content:space-between; align-items: flex-start;
+
+    &__container{
+        color:#222; margin:8px 18px 8px 0; padding-left:18px;
+        border-left:solid 1px #ccc;
+    }
+    &__data{
+        font-size:1.8em;
+        letter-spacing:-2px;
+        line-height:15px;
+    }
+    &__data-small{
+        font-size:50%; letter-spacing:0
+    }
+    &__label{
+        display:block; max-width:100px; padding-top:6px; @include font(.64, 'Regular'); color:darken($app-green, 8%); text-transform:uppercase
+    }
+
+    @media only screen and (max-width: $xlarge) {
+        &__data{font-size:1.6em}
+    }
+    @media only screen and (max-width: $medium) {
+        &__container{display:none;
+            &:nth-child(1), &:nth-child(2) {display:block}
+        }
+        &__label{font-size:.5em}
+    }
+    @media only screen and (max-width: $small) {
+        &__container{display:none;
+            &:nth-child(2){display:none}
+        }
+        &__data{font-size:1.4em; line-height:12px;}
+        &__label{font-size:.44em}
+    }
+}
+

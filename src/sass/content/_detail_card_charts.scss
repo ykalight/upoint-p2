@@ -1,0 +1,74 @@
+.card-detail{
+    width:98%; margin:auto;
+    // @include border-radius(28px);
+    // border:solid 1px #ddd;
+    // background-color: lighten($app-lightgray, 5%);
+    padding:24px;
+    &:last-child{padding-bottom:0}
+    // border-bottom:solid 1px #ddd;
+    border-top:solid 1px #ddd
+}
+.card-detail-head{
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    // @include border-radius(4px);
+    padding:0 12px 24px 0;
+    // background-color: $app-lightgray;
+    border-bottom:dotted 1px darken($card-panel-divider-color, 8%);
+    h4{
+        color:$app-darkgray; @include font(1.5, 'Bold');
+    }
+    .action{
+        display:flex;
+        align-items: center;
+        margin-left:18px;
+        font-size: .9em; color:$app-blue; font-weight:bold;
+        span:before{font-size:12px; margin-right:6px; @include border-radius(100%); padding:5px; border:solid 1px $app-blue;}
+    }
+}
+.card-detail-row{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    h5{ 
+        width:24%;
+        font-size:1.4em; font-weight:bold;
+        div{font-size:64%; color: lighten(#000, 30%)}
+    }
+    h6{font-size:.8em; font-weight:bold; text-align:center}
+    > div{
+        // display:flex; 
+        // align-items: top;
+        min-height: 200px; 
+        padding:0 2.2em;
+        // border-right: solid 1px $app-gray;
+        &:nth-last-child(-n+2){border:0}
+        // &:last-child{flex-grow: 2; justify-content: flex-end; padding:0 18px 0 0}
+    }
+    &:last-child{
+        > div{min-height: auto}
+    }
+    .data{
+        font-size:1.4em; font-weight:bold; color:$app-darkgray;
+        &.smaller{font-size:94%}
+    }
+    label{
+        font-size:.72em;
+    }
+    p{
+        &.warn{font-size:.9em; color:$app-red}
+    }
+
+    .highlight{color:$app-orange}
+    a{
+        font-size:90%;
+        &.button{margin:0; padding-left:1.8em; padding-right:1.8em; text-align:center}
+    }
+}
+.card-detail-last{
+    font-size:90%;
+    margin:24px 0 0 0;
+    text-align: center;
+    font-weight:bold;
+}

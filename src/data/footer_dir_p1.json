@@ -1,0 +1,128 @@
+[
+    {
+        "title": "Explore your benefits",
+        "links": 
+        [
+            {
+                "label": "Health & insurance",
+                "destination": "/blank"
+            },
+            {
+                "label": "Savings & retirement",
+                "destination": "/blank"
+            },
+            {
+                "label": "Pay & time",
+                "destination": "/blank"
+            },
+            {
+                "label": "Life Changes",
+                "destination": "/blank"
+            },
+            {
+                "label": "Your Well-being",
+                "destination": "/blank"
+            },
+            {
+                "label": "Perk & discounts",
+                "destination": "/blank"
+            },
+            {
+                "label": "Reimbursement",
+                "destination": "/blank"
+            },
+            {
+                "label": "Other benefits",
+                "destination": "/blank"
+            }
+        ]
+    },
+    {
+        "title": "Additional information",
+        "links": 
+        [
+            {
+                "label": "Legal information",
+                "destination": "/blank"
+            },
+            {
+                "label": "Privacy statement",
+                "destination": "/blank"
+            },
+            {
+                "label": "Cookie notice",
+                "destination": "/blank"
+            }
+        ]
+    },
+    {
+        "title": "Get in touch",
+        "links": 
+        [
+            {
+                "label": "My Expert",
+                "destination": "/blank"
+            },
+            {
+                "label": "Contact us",
+                "destination": "/blank"
+            },
+            {
+                "label": "Chat",
+                "destination": "/blank"
+            },
+            {
+                "label": "Feedback",
+                "destination": "/blank"
+            }
+        ]
+    },
+    {
+        "title": "Roles",
+        "links": 
+        [
+            {
+                "label": "Employee (current)",
+                "destination": "/blank"
+            },
+            {
+                "label": "Manager view",
+                "destination": "/blank"
+            },
+            {
+                "label": "HR professional",
+                "destination": "/blank"
+            }
+        ]
+    },
+    {
+        "title": "Language",
+        "links": 
+        [
+            {
+                "label": "English",
+                "destination": "/blank"
+            },
+            {
+                "label": "Español",
+                "destination": "/blank"
+            },
+            {
+                "label": "French",
+                "destination": "/blank"
+            },
+            {
+                "label": "Polish",
+                "destination": "/blank"
+            },
+            {
+                "label": "Chinese",
+                "destination": "/blank"
+            },
+            {
+                "label": "German",
+                "destination": "/blank"
+            }
+        ]
+    }
+ ]
